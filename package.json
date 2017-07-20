@@ -1,0 +1,36 @@
+{
+  "name": "create-lomox-app",
+  "version": "1.0.0",
+  "description": "help to create lomox app",
+  "main": "index.js",
+  "homepage":".",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "scripts": {
+    "start": "./react-scripts/bin/react-scripts.js start",
+    "build": "./react-scripts/bin/react-scripts.js build",
+    "test": "./react-scripts/bin/react-scripts.js test --env=jsdom",
+    "eject": "./react-scripts/bin/react-scripts.js eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cross2d/create-lomox-app.git"
+  },
+  "keywords": [
+    "lomox",
+    "app",
+    "desktop",
+    "application",
+    "windows",
+    "win7",
+    "win8",
+    "win10"
+  ],
+  "author": "Colin3dmax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cross2d/create-lomox-app/issues"
+  }
+}
