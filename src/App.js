@@ -10,7 +10,11 @@ class App extends Component {
 
         }
 
-        Lomox.Dialog.initWndWH(320,480);
+        // Lomox.Dialog.initWndWH(320,480);
+    }
+
+    componentDidMount(){
+
     }
 
     render() {

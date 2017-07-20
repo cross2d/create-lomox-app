@@ -6,26 +6,32 @@
  * Modify: 2017-07-20
  */
 
-let qt = qt || {}
-let $ = $ || {}
-let QWebChannel = QWebChannel || function(){}
-let LxDialog = LxDialog || {}
-let LomoX = LomoX || {}
 let LxExt = {};
 
+let qt = window.qt || {}
+let $ = $ || {}
+let QWebChannel = window.QWebChannel || function(){}
+let LxDialog = LxDialog || {}
+let LomoX = LomoX || {}
+let LxDir = LxDir || {}
 
-let thechannel = new QWebChannel(qt.webChannelTransport, function (channel) {
+new QWebChannel(qt.webChannelTransport, function (channel) {
         window.LxDialog = channel.objects.LxDialog;
         window.LomoX = channel.objects.LomoX;
         window.LxDir = channel.objects.LxDir;
+        LxDialog =  channel.objects.LxDialog;
+        LomoX =  channel.objects.LomoX;
+        LxDir = channel.objects.LxDir;
+
+        console.log("include lomox init");
+
         LomoX.getVersion(function (returnValue) {
-            // This callback will be invoked when myMethod has a return value. Keep in mind that
-            // the communication is asynchronous, hence the need for this callback.
-            console.log(returnValue);
+            console.log("LomoX Version:",returnValue);
         });
     }
 );
 
+console.log("include lomox");
 
 LxExt.Transition = function () {};
 
