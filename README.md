@@ -12,5 +12,5 @@
   * write app on src 
   * cd create-lomox-app && npm run build
   
-
-
+  
+![lomox-01-hello-react screenshot](screenshot/create-lomox-app.png)  
