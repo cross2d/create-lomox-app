@@ -15,23 +15,25 @@ let LxDialog = LxDialog || {}
 let LomoX = LomoX || {}
 let LxDir = LxDir || {}
 
-new QWebChannel(qt.webChannelTransport, function (channel) {
-        window.LxDialog = channel.objects.LxDialog;
-        window.LomoX = channel.objects.LomoX;
-        window.LxDir = channel.objects.LxDir;
-        LxDialog =  channel.objects.LxDialog;
-        LomoX =  channel.objects.LomoX;
-        LxDir = channel.objects.LxDir;
+LxExt.init=function(successCall){
+    new QWebChannel(qt.webChannelTransport, function (channel) {
+            window.LxDialog = channel.objects.LxDialog;
+            window.LomoX = channel.objects.LomoX;
+            window.LxDir = channel.objects.LxDir;
+            LxDialog =  channel.objects.LxDialog;
+            LomoX =  channel.objects.LomoX;
+            LxDir = channel.objects.LxDir;
 
-        console.log("include lomox init");
-
-        LomoX.getVersion(function (returnValue) {
-            console.log("LomoX Version:",returnValue);
-        });
-    }
-);
-
-console.log("include lomox");
+            console.log("LomoX Init");
+            LomoX.getVersion(function (returnValue) {
+                console.log("LomoX Version:",returnValue);
+            });
+            if(typeof successCall == "function"){
+                successCall();
+            }
+        }
+    );
+}
 
 LxExt.Transition = function () {};
 
