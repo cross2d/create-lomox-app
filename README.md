@@ -12,5 +12,8 @@
   * write app on src 
   * cd create-lomox-app && npm run build
   
-  
+### Run On Windows
 ![lomox-01-hello-react screenshot](screenshot/create-lomox-app.png)  
+
+### Run On macOS
+![lomox-01-hello-react screenshot](screenshot/create-lomox-app-macos.png)  
